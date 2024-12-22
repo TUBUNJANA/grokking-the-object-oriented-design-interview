@@ -445,7 +445,7 @@ class ParkingLot:
     # synchronizing to allow multiple entrances panels to issue a new
     # parking ticket without interfering with each other
         self.__lock.acquire()
-        ticket = ParkingTicket()
+        ticket = ParkingTicket() #Where this class is defined?
         vehicle.assign_ticket(ticket)
         ticket.save_in_DB()
         # if the ticket is successfully saved in the database, we can increment the parking spot count
